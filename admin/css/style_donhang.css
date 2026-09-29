@@ -1,0 +1,219 @@
+/* Container styles */
+.container-fluid {
+    padding: 25px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.table th {
+    background-color: #52a7e0 !important;
+}
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #52a7e0;
+    color: white;
+    font-weight: 500;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Price styles */
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+    display: block;
+}
+
+.discount {
+    color: #2ecc71;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.final-price {
+    color: #e74c3c;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Status badges */
+.status-pending,
+.status-delivering,
+.status-completed,
+.status-canceled,
+.payment-status-completed,
+.payment-status-pending,
+.payment-status-failed,
+.payment-method-cod,
+.payment-method-momo {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+}
+
+/* Order status */
+.status-pending {
+    background: #fff8e1;
+    color: #f57c00;
+    border: 1px solid #ffe0b2;
+}
+
+.status-delivering {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+.status-completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.status-canceled {
+    background: #fbe9e7;
+    color: #d32f2f;
+    border: 1px solid #ffccbc;
+}
+
+/* Payment status */
+.payment-status-completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.payment-status-pending {
+    background: #fff8e1;
+    color: #f57c00;
+    border: 1px solid #ffe0b2;
+}
+
+.payment-status-failed {
+    background: #fbe9e7;
+    color: #d32f2f;
+    border: 1px solid #ffccbc;
+}
+
+/* Payment method */
+.payment-method-cod {
+    background: #f3e5f5;
+    color: #7b1fa2;
+    border: 1px solid #e1bee7;
+}
+
+.payment-method-momo {
+    background: #fce4ec;
+    color: #c2185b;
+    border: 1px solid #f8bbd0;
+}
+
+/* Button styles */
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.btn-info {
+    background: #52a7e0;
+    color: white;
+    border: none;
+}
+
+.btn-info:hover {
+    background: #4190c4;
+    box-shadow: 0 2px 5px rgba(82, 167, 224, 0.3);
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
+}
+
+/* Empty state */
+.text-center {
+    padding: 30px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .container-fluid {
+        padding: 20px;
+    }
+    
+    .table th,
+    .table td {
+        padding: 12px;
+    }
+    
+    .status-pending,
+    .status-delivering,
+    .status-completed,
+    .status-canceled,
+    .payment-status-completed,
+    .payment-status-pending,
+    .payment-status-failed,
+    .payment-method-cod,
+    .payment-method-momo {
+        min-width: 100px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .table th,
+    .table td {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,145 @@
+/* Banner Slideshow */
+.banner-slideshow {
+    position: relative;
+    max-width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    margin: 25px auto 40px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); /* Adjust shadow direction here */
+    overflow: hidden; /* Ensure images don’t overflow */
+    border-radius: 8px;
+  }
+  
+  .banner-slideshow img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire area without distortion */
+  }
+  
+  /* Slide */
+  .slide {
+    display: none;
+    position: relative;
+  }
+  
+  .fade {
+    animation: fadeEffect 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Nút điều hướng (prev/next) */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px; /* Set fixed width */
+    height: 40px; /* Set fixed height to match width */
+    margin-top: -20px; /* Center the button */
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%; /* Make buttons circular */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
+  }
+  
+  .next {
+    right: 10px; /* Added spacing from the edge */
+  }
+  
+  .prev {
+    left: 10px; /* Added spacing from the edge */
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+
+  .banner-slideshow {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Nút prev/next */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Chấm tròn điều hướng */
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

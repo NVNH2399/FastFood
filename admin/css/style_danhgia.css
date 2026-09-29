@@ -1,0 +1,151 @@
+.container-fluid {
+    padding: 25px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Button thêm đánh giá */
+.btn-primary {
+    background: #52a7e0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #3d8ec7;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #52a7e0;
+    color: white;
+    font-weight: 500;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Star rating */
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.fa-star {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+/* Action buttons */
+.btn-group {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+.btn-danger {
+    background: #FF6F61;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #FF4A3A;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Empty state */
+.text-center {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 15px;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-sm {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+}

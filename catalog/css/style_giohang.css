@@ -1,0 +1,243 @@
+.cart-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.cart-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th {
+    background: var(--primary-red);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.cart-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.delete-btn {
+    padding: 8px 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.total-row {
+    font-weight: bold;
+    background: #f8f9fa;
+}
+
+.total-row td {
+    padding: 15px;
+    color: var(--primary-red);
+}
+
+/* Voucher Styles */
+.voucher-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.voucher-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.voucher-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.voucher-btn {
+    padding: 10px 20px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.alert-success {
+    padding: 10px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.alert-error {
+    padding: 10px;
+    background: #f8d7da;
+    color: #721c24;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.cart-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-continue {
+    background: var(--primary-yellow);
+    color: #333;
+}
+
+.btn-continue:hover {
+    background: #e6b325;
+    color: #333;
+}
+
+.btn-checkout {
+    background: var(--primary-red);
+    color: white;
+}
+
+.btn-checkout:hover {
+    background: #c41230;
+    color: white;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .voucher-form {
+        flex-direction: column;
+    }
+}
+
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 2px;
+    background: #ddd;
+}
+
+.step.active {
+    color: var(--primary-red);
+}
+
+.step.active .step-number {
+    background: var(--primary-red);
+    color: white;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}

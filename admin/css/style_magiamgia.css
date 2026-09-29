@@ -1,0 +1,144 @@
+.container-fluid {
+    padding: 25px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.badge{
+    color: #000;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #52a7e0;
+    color: white;
+    font-weight: 500;
+}
+
+
+
+/* Status styles */
+tr.status-active {
+    background-color: #d4edda;
+}
+
+tr.status-inactive {
+    background-color: #f8d7da;
+}
+
+.form-select-sm {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 120px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+.btn-danger {
+    background: #FF6F61;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #FF4A3A;
+}
+
+.alert {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-sm {
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,161 @@
+.container-fluid {
+    padding: 25px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.table th {
+    background-color: #52a7e0 !important;
+}
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #52a7e0;
+    color: white;
+    font-weight: 500;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.form-select-sm {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 120px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+.btn-danger {
+    background: #FF6F61;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #FF4A3A;
+}
+
+/* Status colors */
+.status-pending {
+    color: #856404;
+    background: #fff3cd;
+}
+
+.status-completed {
+    color: #155724;
+    background: #d4edda;
+}
+
+.status-canceled {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+/* Modal styles */
+.modal-header {
+    background: #52a7e0;
+    color: white;
+    padding: 15px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading {
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-sm {
+        width: 100%;
+    }
+}

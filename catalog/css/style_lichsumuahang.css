@@ -1,0 +1,342 @@
+:root {
+    --primary-red: #e31837;
+    --gray-light: #f8f9fa;
+    --border-color: #eee;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Styles */
+.group, .order-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+h2.lichsu-title {
+    margin: 20px;
+    padding: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+.group h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+/* Order Card Header */
+.order-header {
+    background: var(--gray-light);
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-id {
+    font-weight: 500;
+    color: #333;
+}
+
+.order-date {
+    color: #666;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Status Badges */
+/* Style cho container trạng thái */
+.order-statuses {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Trạng thái đơn hàng - Màu sắc thể hiện tiến độ đơn */
+/* Status Badges */
+.order-statuses {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Order Status Colors */
+.status-pending {
+    background-color: #FF9800; /* Orange for pending */
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.status-delivering {
+    background-color: #2812d0; /* Blue for delivering */
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.status-completed {
+    background-color: #4CAF50; /* Green for completed */
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.status-canceled {
+    background-color: #f44336; /* Red for canceled */
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+/* Trạng thái thanh toán - Màu sắc thể hiện tình trạng thanh toán */
+.payment-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.payment-status.status-pending {
+    background-color: #2196F3;  /* Màu xanh dương cho chờ thanh toán */
+    color: white;
+}
+
+.payment-status.status-completed {
+    background-color: #00BCD4;  /* Màu xanh ngọc cho đã thanh toán */
+    color: white;
+}
+.payment-status-pending_payment {
+    background-color: #FFA726;
+    color: white;
+}
+.payment-status.status-failed {
+    background-color: #9C27B0;  /* Màu tím cho thanh toán thất bại */
+    color: white;
+}
+/* Product List */
+.order-content {
+    padding: 15px;
+}
+
+.product-item {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-name {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.quantity-info {
+    color: #666;
+    margin: 5px 0;
+}
+
+.price-info {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Order Footer */
+.order-footer {
+    padding: 15px;
+    background: var(--gray-light);
+    border-top: 1px solid var(--border-color);
+}
+
+.shipping-info {
+    margin-bottom: 15px;
+}
+
+.shipping-info div {
+    color: #666;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Price Summary */
+.price-summary {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.price-row.discount {
+    color: #28a745;
+}
+
+.price-row.total {
+    border-top: 2px solid var(--border-color);
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.final-price {
+    color: var(--primary-red);
+    font-weight: bold;
+}
+
+/* Cancel Order Section */
+.order-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.countdown {
+    color: #dc3545;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline:hover {
+    background: #fff5f5;
+}
+
+.btn-outline:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.btn-action.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-action:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+/* Empty State */
+.no-orders {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-orders p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #c41230;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .order-date {
+        margin-left: 0;
+    }
+
+    .order-statuses {
+        margin-top: 10px;
+    }
+
+    .product-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .price-info {
+        flex-wrap: wrap;
+    }
+
+    .shipping-info div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}

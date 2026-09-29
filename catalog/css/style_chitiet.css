@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* CSS gốc cho toàn bộ website */
+:root {
+    --primary-red: #e31837;
+    --primary-yellow: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-details {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.product-image {
+    flex: 0 0 300px;
+    /* Giảm từ 500px xuống 400px */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    /* Thêm max-height để kiểm soát chiều cao */
+    object-fit: contain;
+    /* Đảm bảo ảnh không bị méo */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.category {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 24px;
+    color: var(--primary-red);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quantity-wrapper button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-wrapper button:hover {
+    background: #e9ecef;
+}
+
+.quantity-wrapper input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.quantity-wrapper input::-webkit-inner-spin-button,
+.quantity-wrapper input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add-to-cart-btn {
+    padding: 0 30px;
+    height: 40px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #c41230;
+}
+
+.login-notice {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-notice a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Tab styles */
+.tab-container {
+    margin-top: 40px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 2px;
+    margin-bottom: -1px;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.tab-button.active {
+    background: white;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    border: 1px solid #dee2e6;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-image {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* Thêm vào phần style */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+}
+
+.rating input {
+    appearance: unset;
+}
+
+.rating label {
+    cursor: pointer;
+}
+
+.rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+    from {
+        stroke-dashoffset: 24;
+    }
+}
+
+.rating label:hover svg {
+    stroke: var(--fill);
+}
+
+.rating input:checked~label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+}
+
+@keyframes yippee {
+    0% {
+        transform: scale(1);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30% {
+        transform: scale(0);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30.1% {
+        stroke: var(--fill);
+        stroke-dasharray: 0;
+        stroke-linejoin: miter;
+        stroke-width: 8px;
+    }
+
+    60% {
+        transform: scale(1.2);
+        fill: var(--fill);
+    }
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.submit-comment {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-comment:hover {
+    background-color: #c41230;
+}
+
+.comment {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+    color: #333;
+    margin-right: 10px;
+}
+
+.comment .rating-stars {
+    color: #ffc73a;
+    margin-top: 5px;
+}

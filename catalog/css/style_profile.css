@@ -1,0 +1,228 @@
+/* Base Styles */
+:root {
+    --primary-red: #e31837;
+    --hover-red: #c41230;
+    --success: #198754;
+    --danger: #dc3545;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card & Group Styles */
+.group, .order-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.group h2 {
+    color: var(--gray-800);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+/* Form Components */
+.form-group, .password-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label, .password-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.form-group input, .password-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group input:focus, .password-group input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 2px rgba(227, 24, 55, 0.1);
+}
+
+/* Password Field Styles */
+.password-requirements {
+    display: none;
+    background: var(--gray-100);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    border: 1px solid var(--gray-300);
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.password-requirements li {
+    margin: 5px 0;
+    color: var(--danger);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.password-requirements li::before {
+    content: "×";
+    display: inline-block;
+    color: var(--danger);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.password-requirements li.valid {
+    color: var(--success);
+}
+
+.password-requirements li.valid::before {
+    content: "✓";
+    color: var(--success);
+}
+
+/* Password Visibility Toggle */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--gray-600);
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: color 0.2s ease;
+}
+
+.form-group .toggle-password {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.password-group .toggle-password {
+    top: 35px;
+}
+
+.toggle-password:hover {
+    color: var(--gray-800);
+}
+
+/* Change Password Section */
+#change-password-fields {
+    display: none;
+    margin-top: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--hover-red);
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid var(--primary-red);
+    color: var(--primary-red);
+}
+
+.btn-outline:hover {
+    background: #fff5f5;
+}
+
+.save-btn {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    padding: 8px 12px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.save-btn:hover {
+    background: var(--hover-red);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .group {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .password-group input {
+        padding: 8px;
+    }
+
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .password-requirements {
+        font-size: 13px;
+    }
+}

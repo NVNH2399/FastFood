@@ -1,0 +1,15 @@
+# catalog/.htaccess
+
+# Bật rewrite engine
+RewriteEngine On
+
+# Nếu không phải là file thật
+RewriteCond %{REQUEST_FILENAME} !-f
+# Và không phải là thư mục thật  
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Chuyển hướng đến 404.php của bạn
+RewriteRule ^(.*)$ 404.php [L]
+
+# Đặt trang 404 mặc định
+ErrorDocument 404 /bandoannhanh/catalog/404.php

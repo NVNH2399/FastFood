@@ -1,0 +1,150 @@
+.container-fluid {
+    padding: 25px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #52a7e0;
+    color: white;
+    font-weight: 500;
+}
+
+.message-content {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tr.status-unprocessed {
+    background-color: #fff3cd;
+}
+
+tr.status-processed {
+    background-color: #d4edda;
+}
+
+select.status-unprocessed {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+select.status-processed {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+.btn-danger {
+    background: #FF6F61;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #FF4A3A;
+}
+
+.form-select-sm {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 120px;
+}
+
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-sm {
+        width: 100%;
+    }
+}
+
+/* Style cho trạng thái xử lý */
+[class^="processing-status-"] {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.processing-status-processed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.processing-status-unprocessed {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+/* Style cho icon */
+[class^="processing-status-"] i {
+    font-size: 14px;
+}
